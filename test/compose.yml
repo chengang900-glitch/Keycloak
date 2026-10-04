@@ -1,0 +1,25 @@
+name: enterprise-ai-keycloak-theme-test
+
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.7.2
+    command:
+      - start-dev
+      - --import-realm
+      - --http-port=8080
+      - --spi-theme--cache-themes=false
+      - --spi-theme--cache-templates=false
+    environment:
+      KC_BOOTSTRAP_ADMIN_USERNAME: theme-admin
+      KC_BOOTSTRAP_ADMIN_PASSWORD: ThemeAdminOnly-2026!
+    ports:
+      - "127.0.0.1:18080:8080"
+    volumes:
+      - ../dist/enterprise-ai-keycloak-theme-1.0.0.jar:/opt/keycloak/providers/enterprise-ai-keycloak-theme.jar:ro
+      - ./realm-enterprise-ai-theme-test.json:/opt/keycloak/data/import/realm.json:ro
+    healthcheck:
+      test: ["CMD-SHELL", "exec 3<>/dev/tcp/127.0.0.1/8080"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+      start_period: 15s

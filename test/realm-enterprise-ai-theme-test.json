@@ -1,0 +1,42 @@
+{
+  "realm": "enterprise-ai-theme-test",
+  "enabled": true,
+  "displayName": "企业AI中台",
+  "loginTheme": "enterprise-ai",
+  "internationalizationEnabled": true,
+  "supportedLocales": ["zh-CN"],
+  "defaultLocale": "zh-CN",
+  "rememberMe": true,
+  "resetPasswordAllowed": true,
+  "registrationAllowed": false,
+  "clients": [
+    {
+      "clientId": "theme-test",
+      "name": "主题验收应用",
+      "enabled": true,
+      "protocol": "openid-connect",
+      "publicClient": true,
+      "standardFlowEnabled": true,
+      "directAccessGrantsEnabled": false,
+      "redirectUris": ["http://127.0.0.1:18080/test-callback"],
+      "webOrigins": ["http://127.0.0.1:18080"]
+    }
+  ],
+  "users": [
+    {
+      "username": "theme-user",
+      "enabled": true,
+      "email": "theme-user@example.test",
+      "emailVerified": true,
+      "firstName": "Theme",
+      "lastName": "Tester",
+      "credentials": [
+        {
+          "type": "password",
+          "value": "ThemeTestOnly-2026!",
+          "temporary": false
+        }
+      ]
+    }
+  ]
+}
