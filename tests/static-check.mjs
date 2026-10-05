@@ -22,6 +22,8 @@ const registry = await readFile(
 
 assert.match(template, /class="xz-showcase"/);
 assert.match(template, /class="xz-bento"/);
+assert.match(template, /src="\/branding\/company-logo\.webp"/);
+assert.match(template, /src="\/branding\/portal-logo\.webp"/);
 assert.equal(
   (template.match(/class="xz-bento-card /g) ?? []).length,
   4,

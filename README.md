@@ -11,6 +11,11 @@ node tests/static-check.mjs
 
 The deployable provider is `dist/enterprise-ai-keycloak-theme-1.0.0.jar`; verify it with `dist/SHA256SUMS`.
 
+The login template reads the company logo from `/branding/company-logo.webp` on the left and the
+portal logo from `/branding/portal-logo.webp` above the authentication form on the right. When no
+custom upload exists, the template falls back to its packaged `company-logo.png` and
+`product-logo.png` assets.
+
 ## Isolated acceptance
 
 The fixture credentials in `test/realm-enterprise-ai-theme-test.json` are local test data only and must never be used in production.

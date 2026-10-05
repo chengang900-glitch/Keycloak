@@ -153,7 +153,8 @@
 <div class="xz-auth-shell">
   <section class="xz-showcase" aria-label="企业AI中台能力介绍">
     <div class="xz-company-brand">
-      <img src="${url.resourcesPath}/img/company-logo.png" alt="选哲 XuanZhe" width="190" height="54">
+      <img src="/branding/company-logo.webp" alt="公司 Logo" width="190" height="54"
+        onerror="this.onerror=null;this.src='${url.resourcesPath}/img/company-logo.png';">
     </div>
     <h1>连接<span>应用、知识与数据</span><br>让智能体成为企业 AI 能力入口</h1>
     <p class="xz-showcase-lead">覆盖 AI 对话与智能体搭建、经营指标查询与解读、企业知识检索，以及 ERP、PLM、MES、CRM、SRM 等业务系统的统一入口与权限直达。</p>
@@ -201,7 +202,8 @@
   </section>
   <section class="xz-auth-panel" aria-label="身份认证">
     <div class="xz-product-brand">
-      <img src="${url.resourcesPath}/img/product-logo.png" alt="UHOO 企业AI中台" width="190" height="66">
+      <img src="/branding/portal-logo.webp" alt="门户 Logo" width="190" height="66"
+        onerror="this.onerror=null;this.src='${url.resourcesPath}/img/product-logo.png';">
     </div>
 <#if pageId == "login">
     <div class="xz-auth-intro">
