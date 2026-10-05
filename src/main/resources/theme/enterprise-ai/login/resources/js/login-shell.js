@@ -2,6 +2,13 @@
   "use strict";
 
   const initialize = () => {
+    document.querySelectorAll('[data-xz-logo-fallback]').forEach((logo) => {
+      const fallback = () => {
+        logo.src = logo.dataset.xzLogoFallback;
+      };
+      if (logo.complete && logo.naturalWidth === 0) fallback();
+      else logo.addEventListener('error', fallback, { once: true });
+    });
     const tabs = document.querySelector("[data-xz-auth-tabs]");
     if (!tabs) return;
 
